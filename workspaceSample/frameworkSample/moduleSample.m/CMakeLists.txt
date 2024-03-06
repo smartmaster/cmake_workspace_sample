@@ -73,6 +73,8 @@ function(smlCmakeMain)
 	target_link_libraries(${smlPrjectName} PRIVATE "${smlExtraLib}")
 
 	#smlAddBoost(${smlPrjectName})
+	#smlAddBoostByHand("${boostRootDir}" "${smlPrjectName}")
+	smlAdd3rdLibByHand("${t3rdPartyRootDir}" "${t3rdPartyIncDir}" "${t3rdPartyLibDir}" "${t3rdPartyLibPatterns}" "${smlPrjectName}")
 
 
 	set(smlPrjectDefs ${smlPrjectDefsVar})

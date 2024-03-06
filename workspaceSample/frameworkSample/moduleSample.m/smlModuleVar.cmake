@@ -1,5 +1,18 @@
 
 
+##### "${xxxxxx}" "${xxxxxx}" "${xxxxxx}" "${xxxxxx}"
+
+set(t3rdPartyRootDir "D:/sss-git-repo/vcpkg/installed/x64-windows")
+set(t3rdPartyIncDir "include")
+set(t3rdPartyLibDir "lib")
+set(t3rdPartyLibPatterns 
+	"boost_*-vc*-mt.lib"
+	"gmp*.lib"
+	"mpfr*.lib"
+	"tommath.lib"
+)
+
+
 set(smlPrjectNameVar "cmake_sample")
 
 #EXE or DLL, and will never support other types of target

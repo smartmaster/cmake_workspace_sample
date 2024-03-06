@@ -206,9 +206,14 @@ endfunction()
 
 function(smlAdd3rdLibByHand iRootDir iIncDir iLibDir iLibPattern iTarget)
 
-	target_include_directories("${iTarget}" PRIVATE "${iRootDir}/${iIncDir}")
+	# "${xxx}"
+	set(oIncDirs "")
+	smlCollectRootRelativeFiles("${iRootDir}" "." "${iIncDir}" oIncDirs)
+	target_include_directories("${iTarget}" PRIVATE "${oIncDirs}")
 	
-	target_link_directories("${iTarget}" PRIVATE "${iRootDir}/${iLibDir}")
+	set(oLibDirs "")
+	smlCollectRootRelativeFiles("${iRootDir}" "." "${iLibDir}" oLibDirs)
+	target_link_directories("${iTarget}" PRIVATE "${oLibDirs}")
 
 	set(oFullPathFiles "")
 	smlCollectRootRelativeFiles("${iRootDir}" "${iLibDir}" "${iLibPattern}" oFullPathFiles)
@@ -223,10 +228,5 @@ endfunction()
 
 
 function(smlAddBoostByHand iBoostRootDir iTarget)
-	#target_include_directories("${iTarget}" PRIVATE "${iBoostRootDir}/include")
-	#set(oFiles "")
-	#smlCollectRootRelativeFiles("${iBoostRootDir}" "lib" "boost_*-vc140-mt.lib" oFiles)
-	#target_link_directories("${iTarget}" PRIVATE "${iBoostRootDir}/lib")
-	#target_link_libraries("${iTarget}" PRIVATE "${oFiles}")
 	smlAdd3rdLibByHand("${iBoostRootDir}" "include" "lib" "boost_*-vc140-mt.lib" "${iTarget}")
 endfunction()
