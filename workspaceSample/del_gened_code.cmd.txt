@@ -1,0 +1,7 @@
+del /f /s /q /a *.h 
+del /f /s /q /a *.hxx 
+del /f /s /q /a *.hpp 
+del /f /s /q /a *.cpp 
+del /f /s /q /a *.cxx
+del /f /s /q /a *.c
+del /f /s /q /a *.cc

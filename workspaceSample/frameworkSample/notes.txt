@@ -1,0 +1,63 @@
+local_inc
+local_gen
+LocalInterfaces
+LocalGenterated
+private_inc
+private_gen
+PrivateInterfaces
+PrivateGenterated
+protetced_inc
+protetced_gen
+ProtetcedInterfaces
+ProtetcedGenterated
+public_inc
+public_gen
+PublicInterfaces
+PublicGenterated
+
+#######################################
+for /d %%u IN (*) do (
+echo %%u
+)
+
+
+######################################
+	"local_inc"
+	"local_gen"
+	"LocalInterfaces"
+	"LocalGenterated"
+	"private_inc"
+	"private_gen"
+	"PrivateInterfaces"
+	"PrivateGenterated"
+	"protetced_inc"
+	"protetced_gen"
+	"ProtetcedInterfaces"
+	"ProtetcedGenterated"
+	"public_inc"
+	"public_gen"
+	"PublicInterfaces"
+	"PublicGenterated"
+
+
+
+#####################################
+mkdir ^.+$
+mkdir mkdir $0
+
+mkdir LocalInterfaces
+mkdir LocalGenterated
+mkdir PrivateInterfaces
+mkdir PrivateGenterated
+mkdir ProtetcedInterfaces
+mkdir ProtetcedGenterated
+mkdir PublicInterfaces
+mkdir PublicGenterated
+mkdir local_inc
+mkdir local_gen
+mkdir private_inc
+mkdir private_gen
+mkdir protetced_inc
+mkdir protetced_gen
+mkdir public_inc
+mkdir public_gen
